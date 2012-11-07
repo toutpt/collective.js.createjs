@@ -1,4 +1,10 @@
 <?xml version="1.0"?>
 <metadata>
   <version>1000</version>
+  <dependencies>
+    <dependency>profile-collective.js.jqueryui:default</dependency>
+    <dependency>profile-collective.js.backbone:default</dependency>
+    <dependency>profile-collective.js.underscore:default</dependency>
+    <dependency>profile-collective.js.vie:default</dependency>
+  </dependencies>
 </metadata>

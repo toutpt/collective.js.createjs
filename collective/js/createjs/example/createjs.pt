@@ -3,14 +3,21 @@
     <div metal:fill-slot="main">
     <tal:main-macro metal:define-macro="main">
         <div tal:replace="structure provider:plone.abovecontenttitle" />
-
+        <script type="text/javascript" src="++resource++collective.js.halloeditor/hallo.js"></script>
         <script type="text/javascript" charset="utf-8">
-   $(document).ready(function() {
-
-    });
+jQuery(document).ready(function() {
+  jQuery('body').midgardCreate({
+    url: function() { return '/createjs_backend'; }
+  });
+});
         </script>
 
-    <div tal:replace="structure view/context/getText"></div>
+<div class="article" tal:attributes="about string:${view/get_path}">
+  <h1 property="title" tal:content="view/context/Title"></h1>
+  <div property="content" tal:content="structure view/context/getText">
+    Some content
+  </div>
+</div>
 
 
     </tal:main-macro>
