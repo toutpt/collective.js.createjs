@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.js.createjs">
+
+  <browser:resourceDirectory
+    name="collective.js.createjs"
+    directory="resources"
+    />
+
+  <include file="upgrades.zcml"/>
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.js.createjs"
+      directory="profiles/default"
+      description='Extension profile for collective.js.createjs.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>

@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.js.datatables">
+
+  <browser:page
+    name="example.createjs"
+    for="*"
+    class=".createjs.Example"
+    template="createjs.pt"
+    permission="zope2.View"
+    />
+
+</configure>
